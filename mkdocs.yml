@@ -1,0 +1,5 @@
+site_name: Competitive Programming
+site_url: https://hmtrung2305.github.io/competitiveprogramming/
+
+theme:
+  name: material
