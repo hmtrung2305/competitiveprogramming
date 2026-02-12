@@ -3,3 +3,32 @@ site_url: https://hmtrung2305.github.io/competitiveprogramming/
 
 theme:
   name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+
+nav:
+  - Trang chủ: index.md
+  - CP:
+      - Tìm kiếm nhị phân: cp/binarysearch.md
+      - 2 con trỏ: cp/twopointers.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
