@@ -1,6 +1,6 @@
 # **2 con trỏ**
 
-Đây là một phương pháp dùng để xử lý các bài trên mặt phẳng tuyến tính ví dụ như mảng hoặc mặt phẳng tọa độ. Cách nhận diện các bài toán để áp dụng phương pháp *2 con trỏ* cũng khá đơn giản nhưng có một điều kiện quan trọng để áp dụng.
+Đây là một phương pháp dùng để xử lý các bài có cấu trúc tuyến tính theo thứ tự (linear order) ví dụ như mảng hoặc mặt phẳng tọa độ. Cách nhận diện các bài toán để áp dụng phương pháp *2 con trỏ* cũng khá đơn giản nhưng có một điều kiện quan trọng để áp dụng.
 
 Các phương pháp như *cửa sổ trượt (Sliding windows)* cũng là một trong những biến thể của *2 con trỏ*.
 
