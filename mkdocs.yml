@@ -26,7 +26,6 @@ nav:
       - 2 con trỏ: cp/twopointers.md
       - Chia căn: cp/sqrtdecomposition.md
       - Tìm kiếm nhị phân: cp/binarysearch.md
-  - Contest:
 
 plugins:
   - search

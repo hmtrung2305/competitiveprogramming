@@ -101,8 +101,8 @@ Xét điều kiện để áp dụng phương pháp *2 con trỏ*.
 
 Với $A[i] \geq 0$ và $L<R$
 $$
-\sum_{i=L}^{R}{A[i]} \leq t
-\Rightarrow \sum_{i=L}^{R - 1}{A[i]} \leq t
+\sum_{i=L}^{R}{a[i]} \leq t
+\Rightarrow \sum_{i=L}^{R - 1}{a[i]} \leq t
 $$
 Đã thỏa mãn điều kiện áp dụng *2 con trỏ*.
 
