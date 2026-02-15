@@ -14,15 +14,15 @@ Các phương pháp như *cửa sổ trượt (Sliding windows)* cũng là một
 Khi cố định được một cực, ví dụ là cực trái $L$ thì sẽ chọn cực phải $R$ sao cho $R$ xa nhất có thể. Nghĩa là khi cố định $L$ thì sẽ tìm $R$ sao cho $(R - L)$ lớn nhất có thể.
 
 **Lưu ý quan trọng**:
-*2 con trỏ* chỉ áp dụng khi mà với mọi điểm cực trái $L$, cực phải $R$ và $L<R$ sao cho đoạn $A[L..R]$ thỏa mãn bài toán thì đoạn $A[L..R - 1]$ cũng phải thỏa mãn điều kiện bài toán.
+*2 con trỏ* chỉ áp dụng khi mà với mọi điểm cực trái $L$, cực phải $R$ và $L<R$ sao cho đoạn $[L..R]$ thỏa mãn bài toán thì đoạn $[L..R - 1]$ cũng phải thỏa mãn điều kiện bài toán.
 
 ## Các bài toán
 ### Bài toán 1
 Cho mảng $A_i (0 \leq A_i \leq 10^9)$ có độ dài $N (1 \leq N \leq 10^5)$ với $i=0,1,2,..,N-1$.
 
-Đếm số cặp $(L, R)$ sao cho
+Đếm số cặp $(L, R)$ sao cho tổng mảng $A_i$ từ vị trí $i=L$ đến vị trí $i=R$ bé hơn $k$, nói cách khác:
 $$
-\sum^{R}_{i=L}{A[i]} \leq k
+\sum^{R}_{i=L}{A_i} \leq k
 $$
 
 #### **Lời giải**
