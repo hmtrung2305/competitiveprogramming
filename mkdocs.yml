@@ -22,9 +22,11 @@ theme:
 
 nav:
   - Trang chủ: index.md
-  - CP:
-      - Tìm kiếm nhị phân: cp/binarysearch.md
+  - Data Structure & Algorithms:
       - 2 con trỏ: cp/twopointers.md
+      - Chia căn: cp/sqrtdecomposition.md
+      - Tìm kiếm nhị phân: cp/binarysearch.md
+  - Contest:
 
 plugins:
   - search
