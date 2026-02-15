@@ -46,7 +46,9 @@ for (int L = 0; L < N; L++) {
 Để tiếp cận với phương pháp 2 con trỏ, đầu tiên chúng ta hãy xét điều kiện để áp dụng 2 con trỏ.
 
 Nhận xét với $A[i] \geq 0$ thì
-$$\sum_{i=l}^{r}{A[i]} \leq \sum_{i=l}^{r+1}{A[i]}$$
+$$
+\sum_{i=l}^{r}{A[i]} \leq \sum_{i=l}^{r+1}{A[i]}
+$$
 mà
 $$
 \sum_{i=l}^{r+1}{A[i]} \leq k\\
@@ -57,9 +59,13 @@ $$
 Ở đây chúng ta chỉ cần tối ưu cách tìm $R$. Ta tiếp tục nhận xét:
 
 Nếu
-$$\sum_{i=L}^{R}{A[i]}>k$$
+$$
+\sum_{i=L}^{R}{A[i]}>k
+$$
 thì
-$$\sum_{i=L}^{R+1}{A[i]}>k$$
+$$
+\sum_{i=L}^{R+1}{A[i]}>k
+$$
 
 Ta thấy với các đoạn $[L..R]$ không thỏa mãn điều kiện đề bài thì các đoạn $[L..R], [L..R+1], ..., [L..N-1]$ là không cần thiết. Vậy giờ với mỗi $L$ cần tìm $R$ xa nhất sao cho đoạn $[L..R]$ thỏa mãn điều kiện bài toán, thì các đoạn thỏa mãn bắt đầu từ $L$ sẽ là $[L..L], [L..L+1], ..., [L..R]$ và đóng góp $R-L+1$ đoạn. Với điểm $L$ thì vẫn dùng vòng lặp `for` để xét từng điểm như cách tiếp cận đơn giản ở trên, chúng ta cần tiếp tục tối ưu cách tìm $R$. Ta nhận xét với $A[i] \geq 0$ với
 $$
