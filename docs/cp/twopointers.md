@@ -91,7 +91,7 @@ for (int L = 0, R = 0; L < N; L++) {
 #### **Tóm tắt bài toán**
 Cho mảng $a_i (0 \leq a_i \leq 10^9)$ có độ dài $n (1 \leq n \leq 10^5)$ với $i=0,1,2,..,n-1$.
 
-Tìm dãy con liên tục dài nhất sao cho tổng các số trong đoạn đó bé hơn $t (1 \leq t \leq 10^9)$. Nói cách khác tìm giá trị lớn nhất $(R - L)$ sao cho
+Tìm độ dài dãy con liên tục dài nhất sao cho tổng các số trong đoạn đó bé hơn $t (1 \leq t \leq 10^9)$. Nói cách khác tìm giá trị lớn nhất $(R - L)$ sao cho
 $$
 \sum_{i=L}^{R}{a[i]} \leq t
 $$
@@ -99,7 +99,7 @@ $$
 #### **Lời giải**
 Xét điều kiện để áp dụng phương pháp *2 con trỏ*.
 
-Với $A[i] \geq 0$ và $L<R$
+Với $a[i] \geq 0$ và $L<R$
 $$
 \sum_{i=L}^{R}{a[i]} \leq t
 \Rightarrow \sum_{i=L}^{R - 1}{a[i]} \leq t
