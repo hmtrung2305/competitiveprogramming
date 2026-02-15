@@ -1,6 +1,6 @@
 # Competitive Programming
 
-Chào mừng đến blog CP của tôi 🚀
+Chào mừng đến blog CP của classic 🚀
 
 ## Các hướng giải thuật
 - 2 con trỏ (Two Pointers)
