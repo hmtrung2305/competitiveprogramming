@@ -63,12 +63,12 @@ $$
 \Rightarrow \sum_{i=L'}^{R'+1}{A[i]}>k
 $$
 
-Ta thấy với các đoạn $[L'..R']$ không thỏa mãn điều kiện đề bài thì các đoạn $[L'..R'], [L'..R'+1], ..., [L'..N-1]$ là không cần thiết. Vậy giờ với mỗi $L$ cần tìm $R$ xa nhất sao cho đoạn $[L..R]$ thỏa mãn điều kiện bài toán, thì các đoạn thỏa mãn bắt đầu từ $L$ sẽ là $[L..L], [L..L+1], ..., [L..R]$ và đóng góp $R-L+1$ đoạn. Với mỗi $L$ thì vẫn dùng vòng lặp `for` để xét từng điểm như cách tiếp cận đơn giản ở trên (*ở đây chúng ta có thể nhận xét rằng có thể dùng phương pháp tìm kiếm nhị phân để tìm $R$ với tính chất $R$ tăng thì tổng tăng*), chúng ta cần tiếp tục tối ưu cách tìm $R$. Ta nhận xét với $A[i] \geq 0$ với
+Ta thấy với các đoạn $[L'..R']$ không thỏa mãn điều kiện đề bài thì các đoạn $[L'..R'], [L'..R'+1], ..., [L'..N-1]$ là không cần thiết. Vậy giờ với mỗi $L$ cần tìm $R$ xa nhất (gọi là $R_{max}$) sao cho đoạn $[L..R_{max}]$ thỏa mãn điều kiện bài toán, thì tất cả các đoạn thỏa mãn bắt đầu từ $L$ sẽ là $[L..L], [L..L+1], ..., [L..R_{max}]$ và đóng góp $R_{max}-L+1$ đoạn. Với mỗi $L$ thì vẫn dùng vòng lặp `for` để xét từng điểm như cách tiếp cận đơn giản ở trên (*ở đây chúng ta có thể nhận xét rằng có thể dùng phương pháp tìm kiếm nhị phân để tìm $R_{max}$ với tính chất $R$ tăng thì tổng tăng*), chúng ta cần tiếp tục tối ưu cách tìm $R_{max}$. Ta nhận xét với $A[i] \geq 0$ với
 $$
 \sum_{i=L}^{R}{A[i]} \leq k
 \Rightarrow \sum_{i=L+1}^{R}{A[i]} \leq k
 $$
-Dễ dàng thấy rằng khi tịnh tiến $L$ và $R$ giữ nguyên thì vẫn thỏa mãn điều kiện bài toán nên chỉ cần tịnh tiến $R$ khi tịnh tiến $L$. Đến đây ý tưởng code đã hình thành. Đây là bản chất của *2 con trỏ*.
+Dễ dàng thấy rằng khi tịnh tiến $L$ và $R$ giữ nguyên thì vẫn thỏa mãn điều kiện bài toán nên chỉ cần tịnh tiến $R$ khi tịnh tiến $L$. Đây chính là bản chất của *2 con trỏ*.
 
 #### **Code**
 ```cpp
