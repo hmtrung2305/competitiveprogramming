@@ -47,9 +47,9 @@ for (int L = 0; L < N; L++) {
 
 Nhận xét với $A[i] \geq 0$ và $L<R$ thì
 $$
-\sum_{i=L}^{R}{A[i]} \leq \sum_{i=L}^{R-1}{A[i]}
+\sum_{i=L}^{R}{A[i]} \geq \sum_{i=L}^{R-1}{A[i]}
 $$
-mà
+nên
 $$
 \sum_{i=L}^{R}{A[i]} \leq k
 \Rightarrow \sum_{i=L}^{R-1}{A[i]} \leq k
@@ -65,8 +65,8 @@ $$
 
 Ta thấy với các đoạn $[L'..R']$ không thỏa mãn điều kiện đề bài thì các đoạn $[L'..R'], [L'..R'+1], ..., [L'..N-1]$ là không cần thiết. Vậy giờ với mỗi $L$ cần tìm $R$ xa nhất sao cho đoạn $[L..R]$ thỏa mãn điều kiện bài toán, thì các đoạn thỏa mãn bắt đầu từ $L$ sẽ là $[L..L], [L..L+1], ..., [L..R]$ và đóng góp $R-L+1$ đoạn. Với điểm $L$ thì vẫn dùng vòng lặp `for` để xét từng điểm như cách tiếp cận đơn giản ở trên, chúng ta cần tiếp tục tối ưu cách tìm $R$. Ta nhận xét với $A[i] \geq 0$ với
 $$
-\sum_{i=L}^{R} A[i] \leq k
-\Rightarrow \sum_{i=L+1}^{R} A[i] \leq k
+\sum_{i=L}^{R}{A[i]} \leq k
+\Rightarrow \sum_{i=L+1}^{R}{A[i]} \leq k
 $$
 Dễ dàng thấy rằng khi tịnh tiến $L$ và $R$ giữ nguyên thì vẫn thỏa mãn điều kiện bài toán nên chỉ cần tịnh tiến $R$ khi tịnh tiến $L$. Đến đây ý tưởng code đã hình thành. Đây là bản chất của *2 con trỏ*.
 
