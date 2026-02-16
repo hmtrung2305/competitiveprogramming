@@ -90,6 +90,7 @@ for (int L = 0, R = 0; L < N; L++) {
 ```
  
  Cách code gọn hơn (**khuyên dùng**), ý tưởng là với mỗi $L$ tìm $R$ nhỏ nhất (gọi là $R_{min}$) sao cho không thỏa mãn đề bài, vì $R_{min} - 1$ là $R_{max}$ trong lời giải trên.
+
  ```cpp
 long long ans = 0;
 int sum = 0;
@@ -102,6 +103,7 @@ for (int L = 0, R = 0; L < N; L++) {
     ans += R - L;
 }
  ```
+ 
 Độ phức tạp: $O(N)$
 
 ### Bài toán 2
