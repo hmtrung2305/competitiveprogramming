@@ -27,7 +27,23 @@ $$
 
 #### **Lời giải**
 Để tiếp cận bài toán nhanh nhất thì chúng ta sẽ xét tất cả các cặp điểm $(L, R)$ và kiểm tra điều kiện đề bài.
+```cpp
+long long ans = 0;
+for (int L = 0; L < N; L++) {
+    for (int R = L; R < N; R++) {
+        long long sum = 0;
+        for (int i = L; i <= R; i++) {
+            sum += A[i];
+        }
+        if (sum <= k) {
+            ans++;
+        }
+    }
+}
+```
+Độ phức tạp thuật toán này là $O(N^3)$ quá lớn với giới hạn $N \leq 10^5$.
 
+Để tối ưu hơn thì ta nên dùng tổng cộng đồn để tối ưu lại bằng phương pháp tổng cộng dồn.
 ```cpp
 long long ans = 0;
 for (int L = 0; L < N; L++) {
@@ -40,8 +56,7 @@ for (int L = 0; L < N; L++) {
     }
 }
 ```
-
-Độ phức tạp thuật toán ở đây là $O(N^2)$ không phù hợp với giới hạn $N \leq 10^5$.
+Độ phức tạp thuật toán ở đây là $O(N^2)$ vẫn không phù hợp với giới hạn $N \leq 10^5 và cần phương pháp tối ưu hơn.
 
 Để tiếp cận với phương pháp *2 con trỏ*, đầu tiên chúng ta hãy xét điều kiện để áp dụng *2 con trỏ*.
 
@@ -87,11 +102,9 @@ for (int L = 0, R = 0; L < N; L++) {
     sum -= A[L];
     ans += R - L + 1;
 }
-```
- 
- Cách code gọn hơn (**khuyên dùng**), ý tưởng là với mỗi $L$ tìm $R$ nhỏ nhất (gọi là $R_{min}$) sao cho không thỏa mãn đề bài, vì $R_{min} - 1$ là $R_{max}$ trong lời giải trên.
-
- ```cpp
+``` 
+Cách code gọn hơn (**khuyên dùng**), ý tưởng là với mỗi $L$ tìm $R$ nhỏ nhất (gọi là $R_{min}$) sao cho không thỏa mãn đề bài, vì $R_{min} - 1$ là $R_{max}$ trong lời giải trên.
+```cpp
 long long ans = 0;
 int sum = 0;
 for (int L = 0, R = 0; L < N; L++) {
@@ -102,8 +115,7 @@ for (int L = 0, R = 0; L < N; L++) {
     sum -= a[L];
     ans += R - L;
 }
- ```
- 
+```
 Độ phức tạp: $O(N)$
 
 ### Bài toán 2
